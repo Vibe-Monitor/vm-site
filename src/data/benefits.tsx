@@ -1,32 +1,32 @@
-import { FiBarChart2, FiBriefcase, FiPieChart, FiShield, FiTarget, FiTrendingUp, FiActivity, FiAlertTriangle, FiGitPullRequest } from "react-icons/fi";
+import { FiBarChart2, FiShare2, FiPieChart, FiTool, FiTarget, FiTrendingUp, FiActivity, FiSearch, FiGitPullRequest } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Faster Error & Incident Resolution",
-        description: "AI analyzes logs, traces, code diffs, and deploy history to identify root causes and recommend specific fix strategies.",
+        title: "Faster Error Resolution",
+        description: "Analyzes logs, metrics, traces, latest service graph, code diffs, and deploy history using LLMs to identify root cause and recommend specific fix strategies.",
         bullets: [
             {
                 title: "Root Cause Analysis",
                 description: "Correlates signals across your entire stack to find the real problem.",
-                icon: <FiAlertTriangle size={26} />
+                icon: <FiSearch size={26} />
             },
             {
-                title: "Dynamic Service Maps",
+                title: "Dynamic Service Graphs",
                 description: "Auto-generated and maintained service dependency graphs from traces.",
-                icon: <FiBriefcase size={26} />
+                icon: <FiShare2 size={26} />
             },
             {
                 title: "Fix Recommendations",
                 description: "Get specific rollback or patch-forward strategies, not just alerts.",
-                icon: <FiShield size={26} />
+                icon: <FiTool size={26} />
             }
         ]
     },
     {
         title: "Auto-Improve Observability",
-        description: "Our AI identifies missing traces, metrics, and alert rules then automatically raises PRs to add them to your codebase.",
+        description: "Regularly scans all your repositories using LLMs to identify missing instrumentation for logs, metrics and traces and then raises PRs to add missing instrumentation.",
         bullets: [
             {
                 title: "Missing Signal Detection",
@@ -35,7 +35,7 @@ export const benefits: IBenefit[] = [
             },
             {
                 title: "Auto-Generated PRs",
-                description: "Creates pull requests with the exact tracing and metrics code you need.",
+                description: "Creates pull requests with the exact logging, metrics and tracing code needed.",
                 icon: <FiGitPullRequest size={26} />
             },
             {

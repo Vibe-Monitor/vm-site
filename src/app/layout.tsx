@@ -11,24 +11,43 @@ const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteDetails.siteUrl),
   title: siteDetails.metadata.title,
   description: siteDetails.metadata.description,
+  keywords: ['observability', 'AI', 'incident resolution', 'MTTR', 'monitoring', 'engineering tools', 'DevOps'],
+  authors: [{ name: 'Ankesh Khemani' }],
+  creator: 'Ankesh Khemani',
+  publisher: 'VibeMonitor',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/images/vibemonitor-logo-optimized.png',
     shortcut: '/images/vibemonitor-logo-optimized.png',
     apple: '/images/vibemonitor-logo-optimized.png',
   },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteDetails.siteUrl,
     title: siteDetails.metadata.title,
     description: siteDetails.metadata.description,
-    url: siteDetails.siteUrl,
-    type: 'website',
+    siteName: siteDetails.siteName,
     images: [
       {
-        url: '/images/vibemonitor-logo-optimized.png',
+        url: '/images/vm-logo.png',
         width: 1200,
-        height: 675,
-        alt: siteDetails.siteName,
+        height: 630,
+        alt: `${siteDetails.siteName} - AI-Native Observability Platform`,
+        type: 'image/png',
       },
     ],
   },
@@ -36,7 +55,17 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteDetails.metadata.title,
     description: siteDetails.metadata.description,
-    images: ['/images/vibemonitor-logo-optimized.png'],
+    site: '@vibemonitor',
+    creator: '@ankeshkhemani',
+    images: [
+      {
+        url: '/images/vm-logo.png',
+        alt: `${siteDetails.siteName} - AI-Native Observability Platform`,
+      },
+    ],
+  },
+  verification: {
+    google: '', // Add Google Search Console verification code when ready
   },
 };
 

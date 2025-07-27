@@ -1,6 +1,6 @@
 export const ctaDetails = {
-    heading: 'Start Resolving Incidents in Seconds',
-    subheading: 'Ship fearlessly — slash MTTR by up to 80%. Join the early-access list for VibeMonitor.',
+    heading: 'Ready to ship without fear?',
+    subheading: 'Join engineering teams who want to ship with confidence. Get early access to VibeMonitor.',
     appStoreUrl: '#',
     googlePlayUrl: '#'
 }

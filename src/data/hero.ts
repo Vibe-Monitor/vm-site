@@ -1,4 +1,4 @@
 export const heroDetails = {
-    heading: 'Resolve errors and incidents in seconds, not hours.',
-    subheading: 'From error to fix in minutes. Our AI traces the incident back to the exact diff—then cleans it up by patching code and upgrading the missing instrumentation.',
+    heading: 'AI Assisted Observability',
+    subheading: 'Connects to GitHub to monitor code, finds observability gaps, and raises PRs with instrumentation. Sets up dashboards and alerts automatically. Reasons errors with history of logs, code and deployments to pinpoint and fix issues.',
 }

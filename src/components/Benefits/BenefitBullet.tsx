@@ -9,7 +9,7 @@ const BenefitBullet: React.FC<IBenefitBullet> = ({ title, description, icon }: I
             className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow"
             variants={childVariants}
         >
-            <div className="flex justify-center mb-4 text-primary">
+            <div className="flex justify-center mb-4 text-primary" aria-hidden="true">
                 {icon}
             </div>
             <div>

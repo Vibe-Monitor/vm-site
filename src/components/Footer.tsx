@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                                     <Link
                                         href={footerDetails.socials[platformName]}
                                         key={platformName}
-                                        aria-label={platformName}
+                                        aria-label={`Visit VibeMonitor on ${platformName.charAt(0).toUpperCase() + platformName.slice(1)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-primary transition-colors"
