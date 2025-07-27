@@ -1,8 +1,5 @@
 import { ctaDetails } from "@/data/cta"
 
-import AppStoreButton from "./AppStoreButton"
-import PlayStoreButton from "./PlayStoreButton"
-
 const CTA: React.FC = () => {
     return (
         <section id="cta" className="mt-10 mb-5 lg:my-20">
@@ -17,9 +14,17 @@ const CTA: React.FC = () => {
 
                         <p className="mx-auto max-w-xl md:px-5">{ctaDetails.subheading}</p>
 
-                        <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
-                        <AppStoreButton />
-                        <PlayStoreButton />
+                        <div className="mt-6 max-w-md mx-auto">
+                            <iframe 
+                                data-tally-src="https://tally.so/embed/3jALra?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                                loading="lazy" 
+                                width="100%" 
+                                height="198" 
+                                frameBorder="0" 
+                                marginHeight={0} 
+                                marginWidth={0} 
+                                title="🚀 Get Early Access to Vibe Monitor"
+                            ></iframe>
                         </div>
                     </div>
                 </div>

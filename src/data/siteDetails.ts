@@ -1,12 +1,12 @@
 export const siteDetails = {
-    siteName: 'Finwise',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'VibeMonitor',
+    siteUrl: 'https://vibemonitor.com/',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'VibeMonitor - AI-Native Observability Platform',
+        description: 'Cloud-agnostic observability SaaS platform that reduces incident resolution time with AI-powered insights across logs, metrics, traces, and infrastructure.',
     },
     language: 'en-us',
     locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, // or use a string for the logo e.g. "TechStartup"
+    siteLogo: `${process.env.BASE_PATH || ''}/images/vibemonitor-logo.png`,
     googleAnalyticsId: '', // e.g. G-XXXXXXX,
 }
