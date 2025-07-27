@@ -35,38 +35,41 @@ const Header: React.FC = () => {
                         </span>
                     </Link>
 
-                    {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-6">
-                        {menuItems.map(item => (
-                            <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
-                                    {item.text}
+                    {/* Navigation Hidden for Now */}
+                    <div className="hidden">
+                        {/* Desktop Menu */}
+                        <ul className="hidden md:flex space-x-6">
+                            {menuItems.map(item => (
+                                <li key={item.text}>
+                                    <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li>
+                                <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
+                                    Get Early Access
                                 </Link>
                             </li>
-                        ))}
-                        <li>
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
-                                Get Early Access
-                            </Link>
-                        </li>
-                    </ul>
+                        </ul>
 
-                    {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
-                        <button
-                            onClick={toggleMenu}
-                            type="button"
-                            className="bg-primary text-black focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
-                            aria-controls="mobile-menu"
-                            aria-expanded={isOpen}
-                        >
-                            {isOpen ? (
-                                <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
-                            ) : (
-                                <HiBars3 className="h-6 w-6" aria-hidden="true" />
-                            )}
-                            <span className="sr-only">Toggle navigation</span>
-                        </button>
+                        {/* Mobile Menu Button */}
+                        <div className="md:hidden flex items-center">
+                            <button
+                                onClick={toggleMenu}
+                                type="button"
+                                className="bg-primary text-black focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
+                                aria-controls="mobile-menu"
+                                aria-expanded={isOpen}
+                            >
+                                {isOpen ? (
+                                    <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
+                                ) : (
+                                    <HiBars3 className="h-6 w-6" aria-hidden="true" />
+                                )}
+                                <span className="sr-only">Toggle navigation</span>
+                            </button>
+                        </div>
                     </div>
                 </nav>
             </Container>

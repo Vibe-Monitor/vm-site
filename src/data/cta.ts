@@ -1,6 +1,6 @@
 export const ctaDetails = {
-    heading: 'Ready to Stop Firefighting Incidents?',
-    subheading: 'Join engineering teams who have reduced their MTTR and eliminated alert fatigue with AI-native observability.',
+    heading: 'Start Resolving Incidents in Seconds',
+    subheading: 'Ship fearlessly — slash MTTR by up to 80%. Join the early-access list for VibeMonitor.',
     appStoreUrl: '#',
     googlePlayUrl: '#'
 }

@@ -1,5 +1,5 @@
 export const heroDetails = {
-    heading: 'AI-Native Observability That Actually Reduces Incidents',
-    subheading: 'Stop firefighting. VibeMonitor delivers unified observability across logs, metrics, traces, and infrastructure with AI that identifies root causes and recommends solutions.',
+    heading: 'Resolve errors and incidents in seconds, not hours.',
+    subheading: 'From error to fix in minutes. Our AI traces the incident back to the exact diff—then cleans it up by patching code and upgrading the missing instrumentation.',
     centerImageSrc: '/images/hero-mockup.webp',
 }
