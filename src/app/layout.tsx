@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { Source_Sans_3, Manrope } from "next/font/google";
 
 import Header from "@/components/Header";
@@ -15,9 +14,9 @@ export const metadata: Metadata = {
   title: siteDetails.metadata.title,
   description: siteDetails.metadata.description,
   icons: {
-    icon: '/images/vibemonitor-logo.png',
-    shortcut: '/images/vibemonitor-logo.png',
-    apple: '/images/vibemonitor-logo.png',
+    icon: '/images/vibemonitor-logo-optimized.png',
+    shortcut: '/images/vibemonitor-logo-optimized.png',
+    apple: '/images/vibemonitor-logo-optimized.png',
   },
   openGraph: {
     title: siteDetails.metadata.title,
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/vibemonitor-logo.png',
+        url: '/images/vibemonitor-logo-optimized.png',
         width: 1200,
         height: 675,
         alt: siteDetails.siteName,
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteDetails.metadata.title,
     description: siteDetails.metadata.description,
-    images: ['/images/vibemonitor-logo.png'],
+    images: ['/images/vibemonitor-logo-optimized.png'],
   },
 };
 
@@ -51,7 +50,6 @@ export default function RootLayout({
       <body
         className={`${manrope.className} ${sourceSans.className} antialiased`}
       >
-        {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
         <Header />
         <main>
           {children}

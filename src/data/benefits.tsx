@@ -22,8 +22,7 @@ export const benefits: IBenefit[] = [
                 description: "Alerts that understand your deployment patterns and code changes.",
                 icon: <FiTrendingUp size={26} />
             }
-        ],
-        imageSrc: "/images/mockup-1.webp"
+        ]
     },
     {
         title: "Auto-Improve Observability",
@@ -44,8 +43,7 @@ export const benefits: IBenefit[] = [
                 description: "Works with your existing OTel setup, no vendor lock-in.",
                 icon: <FiPieChart size={26} />
             }
-        ],
-        imageSrc: "/images/mockup-2.webp"
+        ]
     },
     {
         title: "Faster Incident Resolution",
@@ -66,7 +64,6 @@ export const benefits: IBenefit[] = [
                 description: "Get specific rollback or patch-forward strategies, not just alerts.",
                 icon: <FiShield size={26} />
             }
-        ],
-        imageSrc: "/images/mockup-1.webp"
+        ]
     },
 ]

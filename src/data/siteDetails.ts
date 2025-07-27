@@ -7,6 +7,6 @@ export const siteDetails = {
     },
     language: 'en-us',
     locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/vibemonitor-logo.png`,
+    siteLogo: `${process.env.BASE_PATH || ''}/images/vibemonitor-logo-optimized.png`,
     googleAnalyticsId: '', // e.g. G-XXXXXXX,
 }
