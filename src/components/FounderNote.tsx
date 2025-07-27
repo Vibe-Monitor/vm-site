@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const FounderNote: React.FC = () => {
     return (
@@ -6,8 +7,14 @@ const FounderNote: React.FC = () => {
             <div className="max-w-4xl mx-auto px-6">
                 <div className="bg-gray-50 rounded-xl p-8 md:p-12 text-center">
                     <div className="mb-6">
-                        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-2xl font-bold text-white">AK</span>
+                        <div className="w-16 h-16 mx-auto mb-4">
+                            <Image 
+                                src="/images/ankesh.png"
+                                alt="Ankesh Khemani"
+                                width={64}
+                                height={64}
+                                className="rounded-full object-cover w-full h-full"
+                            />
                         </div>
                     </div>
                     
