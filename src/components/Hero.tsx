@@ -1,13 +1,38 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 
 import { heroDetails } from '@/data/hero';
 
+// Type declaration for Tally
+declare global {
+    interface Window {
+        Tally?: {
+            loadEmbeds: () => void;
+        };
+    }
+}
+
 const Hero: React.FC = () => {
     useEffect(() => {
         // Ensure Tally loads when component mounts
-        if (typeof window !== 'undefined' && (window as any).Tally) {
-            (window as any).Tally.loadEmbeds();
+        const loadTally = () => {
+            const script = document.createElement('script');
+            script.src = 'https://tally.so/widgets/embed.js';
+            script.async = true;
+            script.onload = () => {
+                if (typeof window !== 'undefined' && window.Tally) {
+                    window.Tally.loadEmbeds();
+                }
+            };
+            document.head.appendChild(script);
+        };
+        
+        if (!document.querySelector('script[src="https://tally.so/widgets/embed.js"]')) {
+            loadTally();
+        } else if (typeof window !== 'undefined' && window.Tally) {
+            window.Tally.loadEmbeds();
         }
     }, []);
     return (

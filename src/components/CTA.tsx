@@ -1,6 +1,24 @@
+'use client';
+
 import { ctaDetails } from "@/data/cta"
+import { useEffect } from "react";
+
+// Type declaration for Tally
+declare global {
+    interface Window {
+        Tally?: {
+            loadEmbeds: () => void;
+        };
+    }
+}
 
 const CTA: React.FC = () => {
+    useEffect(() => {
+        // Ensure Tally loads when component mounts
+        if (typeof window !== 'undefined' && window.Tally) {
+            window.Tally.loadEmbeds();
+        }
+    }, []);
     return (
         <section id="cta" className="mt-10 mb-5 lg:my-20">
             <div className="relative h-full w-full z-10 mx-auto py-12 sm:py-20">

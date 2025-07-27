@@ -43,9 +43,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script src="https://tally.so/widgets/embed.js"></script>
-      </head>
       <body
         className={`${manrope.className} ${sourceSans.className} antialiased`}
       >
@@ -55,11 +52,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <script dangerouslySetInnerHTML={{ __html: `
-          if (typeof Tally !== 'undefined') {
-            Tally.loadEmbeds();
-          }
-        ` }} />
       </body>
     </html>
   );
