@@ -42,8 +42,8 @@ const CTA: React.FC = () => {
                                 frameBorder="0" 
                                 marginHeight={0} 
                                 marginWidth={0} 
-                                title="Get Early Access to VibeMonitor"
-                                aria-label="Email signup form for VibeMonitor early access"
+                                title="Request Demo - VibeMonitor"
+                                aria-label="Demo request form for VibeMonitor"
                                 className="rounded-md"
                             ></iframe>
                         </div>

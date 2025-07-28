@@ -6,7 +6,7 @@ import { childVariants } from "./BenefitSection"
 const BenefitBullet: React.FC<IBenefitBullet> = ({ title, description, icon }: IBenefitBullet) => {
     return (
         <motion.div
-            className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow"
+            className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             variants={childVariants}
         >
             <div className="flex justify-center mb-4 text-primary" aria-hidden="true">

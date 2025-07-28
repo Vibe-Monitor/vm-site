@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import { Source_Sans_3, Manrope } from "next/font/google";
+import Script from 'next/script';
+
+// Type declaration for Tally
+declare global {
+  interface Window {
+    Tally?: {
+      loadEmbeds: () => void;
+    };
+  }
+}
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -84,6 +94,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Script 
+          src="https://tally.so/widgets/embed.js" 
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

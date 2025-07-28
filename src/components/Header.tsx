@@ -4,31 +4,28 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-import Container from './Container';
-import { siteDetails } from '@/data/siteDetails';
-
 const Header: React.FC = () => {
 
     return (
-        <header className="bg-transparent fixed top-0 left-0 right-0 z-50 mx-auto w-full">
-            <Container className="!px-0">
-                <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2" aria-label="VibeMonitor Home">
-                        <Image 
-                            src={siteDetails.siteLogo} 
-                            alt="VibeMonitor - AI Assisted Observability Platform" 
-                            width={32} 
-                            height={32} 
-                            className="min-w-fit h-8 object-contain"
-                        />
-                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer">
-                            {siteDetails.siteName}
-                        </span>
-                    </Link>
+        <header className="sticky top-0 z-40 backdrop-blur-md bg-white/70 shadow-sm">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+                <Link href="/" className="flex items-center gap-2" aria-label="VibeMonitor Home">
+                    <Image src="/images/vibemonitor-logo-optimized.png" alt="VibeMonitor" width={24} height={24} className="h-6 w-6 object-contain" />
+                    <span className="hidden font-semibold md:inline text-foreground">VibeMonitor</span>
+                </Link>
 
+                <nav className="hidden items-center gap-8 text-sm md:flex">
+                    <Link href="#features" className="hover:text-teal-600 transition-colors">Features</Link>
+                    <Link href="#founder" className="hover:text-teal-600 transition-colors">About</Link>
                 </nav>
-            </Container>
+
+                <Link
+                    href="#cta"
+                    className="rounded-full bg-slate-800 px-4 py-2 text-sm font-medium text-white shadow hover:bg-slate-900 transition-colors"
+                >
+                    Request Demo
+                </Link>
+            </div>
 
         </header>
     );

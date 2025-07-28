@@ -49,7 +49,7 @@ const BenefitSection: React.FC<Props> = ({ benefit }: Props) => {
     return (
         <section className="benefit-section">
             <motion.div
-                className="flex flex-col items-center justify-center mb-24 max-w-4xl mx-auto"
+                className="flex flex-col items-center justify-center mb-28 md:mb-32 max-w-4xl mx-auto"
                 variants={containerVariants}
                 initial="offscreen"
                 whileInView="onscreen"
@@ -71,7 +71,7 @@ const BenefitSection: React.FC<Props> = ({ benefit }: Props) => {
                         </p>
                     </motion.div>
 
-                    <div className="mx-auto w-full mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="mx-auto w-full mt-8 grid grid-cols-1 md:grid-cols-3 gap-10">
                         {bullets.map((item, index) => (
                             <BenefitBullet key={index} title={item.title} icon={item.icon} description={item.description} />
                         ))}

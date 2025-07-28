@@ -2,7 +2,7 @@ import React from 'react';
 
 const OutcomeSection: React.FC = () => {
     return (
-        <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <section className="py-28 md:py-32 bg-gradient-to-b from-white to-gray-50">
             <div className="max-w-4xl mx-auto px-6 text-center">
                 <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-6">
                     Observability that builds itself
@@ -13,7 +13,7 @@ const OutcomeSection: React.FC = () => {
                     When something breaks, you instantly get the exact change that caused it—and how to fix it.
                 </p>
                 
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div className="text-center">
                         <div className="text-4xl md:text-5xl font-bold text-primary mb-2">Auto</div>
                         <div className="text-foreground-accent">Instrumentation & Setup</div>

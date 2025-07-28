@@ -4,7 +4,7 @@ import { FaLinkedin } from 'react-icons/fa6';
 
 const FounderNote: React.FC = () => {
     return (
-        <section className="py-16 bg-white">
+        <section id="founder" className="py-28 md:py-32 bg-white">
             <div className="max-w-4xl mx-auto px-6">
                 <div className="bg-gray-50 rounded-xl p-8 md:p-12 text-center">
                     <div className="mb-6">
