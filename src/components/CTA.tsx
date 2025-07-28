@@ -23,7 +23,7 @@ const CTA: React.FC = () => {
         <section id="cta" className="mt-10 mb-5 lg:my-20">
             <div className="relative h-full w-full z-10 mx-auto py-12 sm:py-20">
                 <div className="h-full w-full">
-                    <div className="rounded-3xl absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-primary to-primary-accent">
+                    <div className="rounded-3xl absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-slate-800 to-slate-900">
                         <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
 
