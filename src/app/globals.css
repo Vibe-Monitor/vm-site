@@ -17,6 +17,16 @@ html {
   @apply scroll-smooth;
 }
 
+/* Native scroll-snap for full-screen sections */
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
 body {
   @apply text-lg;
   
