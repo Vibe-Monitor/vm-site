@@ -1,4 +1,4 @@
-import { FiBarChart2, FiShare2, FiPieChart, FiTool, FiTarget, FiTrendingUp, FiActivity, FiSearch, FiGitPullRequest } from "react-icons/fi";
+import { FiShare2, FiPieChart, FiTool, FiTrendingUp, FiSliders, FiShield, FiActivity, FiSearch, FiGitPullRequest } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
@@ -46,23 +46,23 @@ export const benefits: IBenefit[] = [
         ]
     },
     {
-        title: "Reduce Alert Fatigue",
-        description: "Stop drowning in noisy alerts. Our AI clusters and summarizes alerts, giving you only what matters when incidents actually happen.",
+        title: "Zero-Noise Alerting",
+        description: "Learns your patterns, self-tunes thresholds, and filters out deployment blips—ensuring alerts mean something is genuinely broken.",
         bullets: [
             {
-                title: "AI-Based Alert Clustering",
-                description: "Groups related alerts to reduce noise and focus on root issues.",
-                icon: <FiBarChart2 size={26} />
-            },
-            {
-                title: "Smart Summarization",
-                description: "Get incident summaries that highlight what's actually broken.",
-                icon: <FiTarget size={26} />
-            },
-            {
-                title: "Context-Aware Alerting",
-                description: "Alerts that understand your deployment patterns and code changes.",
+                title: "Anomaly Detection",
+                description: "Understands day-of-week and hour-of-day patterns, then detects meaningful deviations—not just rule breaches.",
                 icon: <FiTrendingUp size={26} />
+            },
+            {
+                title: "Self-Tuning Thresholds",
+                description: "Starts with smart defaults, then adapts as your system evolves—customize anytime.",
+                icon: <FiSliders size={26} />
+            },
+            {
+                title: "Deployment-Aware",
+                description: "Suppresses temporary metric dips during rollouts—alerting kicks in only when issues persist.",
+                icon: <FiShield size={26} />
             }
         ]
     },

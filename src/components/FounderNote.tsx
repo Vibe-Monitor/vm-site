@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { FaLinkedin } from 'react-icons/fa6';
 
 const FounderNote: React.FC = () => {
     return (
@@ -10,7 +11,7 @@ const FounderNote: React.FC = () => {
                         <div className="w-16 h-16 mx-auto mb-4">
                             <Image 
                                 src="/images/ankesh.png"
-                                alt="Ankesh Khemani"
+                                alt="Ankesh Khemani, Founder of VibeMonitor"
                                 width={64}
                                 height={64}
                                 className="rounded-full object-cover w-full h-full"
@@ -19,8 +20,8 @@ const FounderNote: React.FC = () => {
                     </div>
                     
                     <blockquote className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
-                        &ldquo;I&apos;m Ankesh, ex-Atlassian engineer who spent too many nights debugging incidents that could have been solved in minutes with the right context. 
-                        VibeMonitor is built for engineering teams who are tired of playing detective during outages.&rdquo;
+                        &ldquo;I&apos;m Ankesh, ex-Atlassian engineer who spent too many weekends fixing bugs that could have been caught and explained in minutes. 
+                        VibeMonitor is built for small teams who want to spend time building features, not firefighting production issues.&rdquo;
                     </blockquote>
                     
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -28,14 +29,26 @@ const FounderNote: React.FC = () => {
                             <strong>Ankesh Khemani</strong><br />
                             Founder, VibeMonitor
                         </p>
-                        <a 
-                            href="https://calendly.com/ankesh-khemani/meetme" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary-accent transition-colors font-medium"
-                        >
-                            Schedule a Chat
-                        </a>
+                        <div className="flex items-center gap-3">
+                            <a 
+                                href="https://www.linkedin.com/in/ankeshkhemani/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Connect with Ankesh on LinkedIn"
+                                className="text-primary hover:text-primary-accent transition-colors"
+                            >
+                                <FaLinkedin size={24} />
+                            </a>
+                            <a 
+                                href="https://calendly.com/ankesh-khemani/meetme" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary-accent transition-colors font-medium"
+                                aria-label="Schedule a chat with Ankesh Khemani, VibeMonitor founder"
+                            >
+                                Schedule a Chat
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

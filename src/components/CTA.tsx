@@ -31,6 +31,7 @@ const CTA: React.FC = () => {
                         <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl">{ctaDetails.heading}</h2>
 
                         <p className="mx-auto max-w-xl md:px-5 text-white/90 text-lg">{ctaDetails.subheading}</p>
+                        <p className="mx-auto max-w-xl md:px-5 text-white/90 text-lg mt-2">{ctaDetails.callToAction}</p>
 
                         <div className="mt-8 max-w-md mx-auto bg-white rounded-lg p-6 shadow-xl">
                             <iframe 
@@ -42,6 +43,7 @@ const CTA: React.FC = () => {
                                 marginHeight={0} 
                                 marginWidth={0} 
                                 title="Get Early Access to VibeMonitor"
+                                aria-label="Email signup form for VibeMonitor early access"
                                 className="rounded-md"
                             ></iframe>
                         </div>
