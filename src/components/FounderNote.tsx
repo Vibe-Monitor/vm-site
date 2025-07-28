@@ -1,13 +1,28 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { FaLinkedin } from 'react-icons/fa6';
 
 const FounderNote: React.FC = () => {
     return (
-        <section id="founder" className="py-28 md:py-32 bg-white">
+        <div className="w-full min-h-screen flex items-center justify-center bg-white">
             <div className="max-w-4xl mx-auto px-6">
-                <div className="bg-gray-50 rounded-xl p-8 md:p-12 text-center">
-                    <div className="mb-6">
+                <motion.div 
+                    className="bg-gray-50 rounded-xl p-8 md:p-12 text-center"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
+                    <motion.div 
+                        className="mb-6"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
                         <div className="w-16 h-16 mx-auto mb-4">
                             <Image 
                                 src="/images/ankesh.png"
@@ -17,14 +32,26 @@ const FounderNote: React.FC = () => {
                                 className="rounded-full object-cover w-full h-full"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                     
-                    <blockquote className="text-lg md:text-xl text-foreground leading-relaxed mb-6">
+                    <motion.blockquote 
+                        className="text-lg md:text-xl text-foreground leading-relaxed mb-6"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        viewport={{ once: true }}
+                    >
                         &ldquo;I&apos;m Ankesh, ex-Atlassian engineer who spent too many weekends fixing bugs that could have been caught and explained in minutes. 
                         VibeMonitor is built for small teams who want to spend time building features, not firefighting production issues.&rdquo;
-                    </blockquote>
+                    </motion.blockquote>
                     
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <motion.div 
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        viewport={{ once: true }}
+                    >
                         <p className="text-foreground-accent">
                             <strong>Ankesh Khemani</strong><br />
                             Founder, VibeMonitor
@@ -49,10 +76,10 @@ const FounderNote: React.FC = () => {
                                 Schedule a Chat
                             </a>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
-        </section>
+        </div>
     );
 };
 

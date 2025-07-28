@@ -4,15 +4,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { heroDetails } from '@/data/hero';
-
-// Type declaration for Tally
-declare global {
-    interface Window {
-        Tally?: {
-            loadEmbeds: () => void;
-        };
-    }
-}
+import '@/types/global';
 
 const Hero: React.FC = () => {
     useEffect(() => {
@@ -22,9 +14,8 @@ const Hero: React.FC = () => {
         }
     }, []);
     return (
-        <motion.section
-            id="hero"
-            className="relative flex items-center justify-center pt-32 pb-28 px-5"
+        <motion.div
+            className="relative flex items-center justify-center min-h-screen px-5 w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -55,13 +46,8 @@ const Hero: React.FC = () => {
                     ></iframe>
                 </div>
                 
-                {/* Scroll cue */}
-                <a href="#outcome" className="mt-10 flex flex-col items-center text-xs text-gray-500 hover:text-gray-700 transition-colors">
-                    <span className="animate-bounce text-lg">↓</span>
-                    <span className="mt-1">Scroll</span>
-                </a>
             </div>
-        </motion.section>
+        </motion.div>
     );
 };
 

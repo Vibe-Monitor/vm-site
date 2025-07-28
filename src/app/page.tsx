@@ -1,23 +1,37 @@
-import Hero from "@/components/Hero";
+import EnhancedHero from "@/components/EnhancedHero";
 import OutcomeSection from "@/components/OutcomeSection";
-import Benefits from "@/components/Benefits/Benefits";
+import BenefitSection from "@/components/Benefits/BenefitSection";
 import FounderNote from "@/components/FounderNote";
 import Container from "@/components/Container";
 import CTA from "@/components/CTA";
+import FullScreenScroll from "@/components/FullScreenScroll";
+import { benefits } from "@/data/benefits";
 
 const HomePage: React.FC = () => {
+  const sections = [
+    <EnhancedHero key="hero" />,
+    <OutcomeSection key="outcome" />,
+    ...benefits.map((benefit, index) => (
+      <div key={`benefit-${index}`} className="w-full min-h-screen flex items-center justify-center">
+        <BenefitSection benefit={benefit} />
+      </div>
+    )),
+    <FounderNote key="founder" />,
+    <Container key="cta"><CTA /></Container>
+  ];
+
+  const sectionIds = [
+    'hero',
+    'outcome',
+    ...benefits.map((_, index) => `benefit-${index}`),
+    'founder',
+    'cta'
+  ];
+
   return (
-    <>
-      <Hero />
-      <OutcomeSection />
-      <Container>
-        <Benefits />
-      </Container>
-      <FounderNote />
-      <Container>
-        <CTA />
-      </Container>
-    </>
+    <FullScreenScroll sectionIds={sectionIds}>
+      {sections}
+    </FullScreenScroll>
   );
 };
 
