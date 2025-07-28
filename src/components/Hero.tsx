@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
                 </div>
                 
                 {/* Scroll cue */}
-                <a href="#features" className="mt-10 flex flex-col items-center text-xs text-gray-500 hover:text-gray-700 transition-colors">
+                <a href="#outcome" className="mt-10 flex flex-col items-center text-xs text-gray-500 hover:text-gray-700 transition-colors">
                     <span className="animate-bounce text-lg">↓</span>
                     <span className="mt-1">Scroll</span>
                 </a>

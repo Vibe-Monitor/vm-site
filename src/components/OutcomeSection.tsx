@@ -2,7 +2,7 @@ import React from 'react';
 
 const OutcomeSection: React.FC = () => {
     return (
-        <section className="py-28 md:py-32 bg-gradient-to-b from-white to-gray-50">
+        <section id="outcome" className="py-28 md:py-32 bg-gradient-to-b from-white to-gray-50">
             <div className="max-w-4xl mx-auto px-6 text-center">
                 <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-6">
                     Observability that builds itself
