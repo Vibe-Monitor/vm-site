@@ -4,6 +4,23 @@ import { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import '@/types/global';
 
+// Custom hook for media query
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addListener(listener);
+    return () => media.removeListener(listener);
+  }, [matches, query]);
+
+  return matches;
+};
+
 interface FullScreenScrollProps {
   children: React.ReactNode[];
   sectionIds: string[];
@@ -11,6 +28,7 @@ interface FullScreenScrollProps {
 
 const FullScreenScroll: React.FC<FullScreenScrollProps> = ({ children, sectionIds }) => {
   const [currentSection, setCurrentSection] = useState(0);
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   const scrollToSection = useCallback((index: number) => {
     if (index >= 0 && index < children.length) {
@@ -73,13 +91,13 @@ const FullScreenScroll: React.FC<FullScreenScrollProps> = ({ children, sectionId
 
   return (
     <>
-      {/* Navigation Dots */}
-      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-3">
+      {/* Navigation Dots - Responsive */}
+      <div className="fixed bottom-6 right-1/2 transform translate-x-1/2 md:right-6 md:top-1/2 md:transform md:-translate-y-1/2 md:translate-x-0 z-50 flex flex-row md:flex-col gap-4 md:gap-3">
         {children.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollToSection(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${ 
+            className={`w-5 h-5 md:w-3 md:h-3 rounded-full transition-all duration-300 ${ 
               currentSection === index
                 ? 'bg-primary scale-125 shadow-lg'
                 : 'bg-gray-300 hover:bg-gray-400 hover:scale-110'
@@ -94,14 +112,14 @@ const FullScreenScroll: React.FC<FullScreenScrollProps> = ({ children, sectionId
         <section
           key={index}
           id={sectionIds[index]}
-          className="scroll-snap-section flex items-center justify-start flex-col"
+          className="scroll-snap-section min-h-screen flex items-center justify-start flex-col"
         >
           {child}
         </section>
       ))}
 
-      {/* Scroll Hint */}
-      {currentSection < children.length - 1 && (
+      {/* Scroll Hint - Desktop Only */}
+      {isDesktop && currentSection < children.length - 1 && (
         <motion.div
           className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-40 text-center text-gray-500"
           initial={{ opacity: 0 }}

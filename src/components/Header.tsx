@@ -13,7 +13,7 @@ const Header: React.FC = () => {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Link href="/" className="flex items-center gap-2" aria-label="VibeMonitor Home">
                         <Image src="/images/vibemonitor-logo-optimized.png" alt="VibeMonitor" width={24} height={24} className="h-6 w-6 object-contain" />
-                        <span className="hidden font-semibold md:inline text-foreground">VibeMonitor</span>
+                        <span className="hidden font-semibold sm:inline text-foreground">VibeMonitor</span>
                     </Link>
                 </motion.div>
 

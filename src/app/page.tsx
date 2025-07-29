@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
     <EnhancedHero key="hero" />,
     <OutcomeSection key="outcome" />,
     ...benefits.map((benefit, index) => (
-      <div key={`benefit-${index}`} className="w-full min-h-screen flex items-center justify-center">
+      <div key={`benefit-${index}`} className="w-full min-h-screen flex items-center justify-center px-6 sm:px-8 md:px-0">
         <BenefitSection benefit={benefit} />
       </div>
     )),
