@@ -67,7 +67,7 @@ const FounderNote: React.FC = () => {
                                 <FaLinkedin size={24} />
                             </a>
                             <a 
-                                href="https://calendly.com/ankesh-khemani/meetme" 
+                                href="https://calendly.com/ankesh-vibemonitor/meetme" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary-accent transition-colors font-medium"
