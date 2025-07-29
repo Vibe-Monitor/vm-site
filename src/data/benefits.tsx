@@ -10,17 +10,20 @@ export const benefits: IBenefit[] = [
             {
                 title: "Root Cause Analysis",
                 description: "Correlates signals across your entire stack to find the real problem.",
-                icon: <FiSearch size={26} />
+                icon: <FiSearch size={26} />,
+                iconColor: "text-analytical"
             },
             {
                 title: "Dynamic Service Graphs",
                 description: "Auto-generated and maintained service dependency graphs from traces.",
-                icon: <FiShare2 size={26} />
+                icon: <FiShare2 size={26} />,
+                iconColor: "text-integration"
             },
             {
                 title: "Fix Recommendations",
                 description: "Get specific rollback or patch-forward strategies, not just alerts.",
-                icon: <FiTool size={26} />
+                icon: <FiTool size={26} />,
+                iconColor: "text-tools"
             }
         ]
     },
@@ -31,17 +34,20 @@ export const benefits: IBenefit[] = [
             {
                 title: "Missing Signal Detection",
                 description: "Finds gaps in your observability coverage automatically.",
-                icon: <FiActivity size={26} />
+                icon: <FiActivity size={26} />,
+                iconColor: "text-analytical"
             },
             {
                 title: "Auto-Generated PRs",
                 description: "Creates pull requests with the exact logging, metrics and tracing code needed.",
-                icon: <FiGitPullRequest size={26} />
+                icon: <FiGitPullRequest size={26} />,
+                iconColor: "text-integration"
             },
             {
                 title: "OpenTelemetry Native",
                 description: "Works with your existing OTel setup, no vendor lock-in.",
-                icon: <FiPieChart size={26} />
+                icon: <FiPieChart size={26} />,
+                iconColor: "text-integration"
             }
         ]
     },
@@ -52,17 +58,20 @@ export const benefits: IBenefit[] = [
             {
                 title: "Anomaly Detection",
                 description: "Understands day-of-week and hour-of-day patterns, then detects meaningful deviations—not just rule breaches.",
-                icon: <FiTrendingUp size={26} />
+                icon: <FiTrendingUp size={26} />,
+                iconColor: "text-analytical"
             },
             {
                 title: "Self-Tuning Thresholds",
                 description: "Starts with smart defaults, then adapts as your system evolves—customize anytime.",
-                icon: <FiSliders size={26} />
+                icon: <FiSliders size={26} />,
+                iconColor: "text-tools"
             },
             {
                 title: "Deployment-Aware",
                 description: "Suppresses temporary metric dips during rollouts—alerting kicks in only when issues persist.",
-                icon: <FiShield size={26} />
+                icon: <FiShield size={26} />,
+                iconColor: "text-tools"
             }
         ]
     },

@@ -62,7 +62,7 @@ const FounderNote: React.FC = () => {
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 aria-label="Connect with Ankesh on LinkedIn"
-                                className="text-primary hover:text-primary-accent transition-colors"
+                                className="text-linkedin hover:opacity-80 transition-colors"
                             >
                                 <FaLinkedin size={24} />
                             </a>
@@ -70,7 +70,7 @@ const FounderNote: React.FC = () => {
                                 href="https://calendly.com/ankesh-vibemonitor/meetme" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="bg-primary text-white px-6 py-3 rounded-full hover:bg-primary-accent transition-colors font-medium"
+                                className="bg-cta text-white px-6 py-3 rounded-full hover:opacity-90 transition-all font-medium"
                                 aria-label="Schedule a chat with Ankesh Khemani, VibeMonitor founder"
                             >
                                 Schedule a Chat

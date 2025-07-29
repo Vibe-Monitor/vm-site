@@ -42,7 +42,7 @@ const OutcomeSection: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <div className="text-4xl md:text-5xl font-bold text-primary mb-2">Auto</div>
+                        <div className="text-4xl md:text-5xl font-bold text-integration mb-2">Auto</div>
                         <div className="text-foreground-accent">Instrumentation & Setup</div>
                     </motion.div>
                     <motion.div 
@@ -52,7 +52,7 @@ const OutcomeSection: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <div className="text-4xl md:text-5xl font-bold text-primary mb-2">Complete</div>
+                        <div className="text-4xl md:text-5xl font-bold text-analytical mb-2">Complete</div>
                         <div className="text-foreground-accent">Coverage</div>
                     </motion.div>
                     <motion.div 
@@ -62,7 +62,7 @@ const OutcomeSection: React.FC = () => {
                         transition={{ duration: 0.5, delay: 1.0 }}
                         viewport={{ once: true }}
                     >
-                        <div className="text-4xl md:text-5xl font-bold text-primary mb-2">Instant</div>
+                        <div className="text-4xl md:text-5xl font-bold text-tools mb-2">Instant</div>
                         <div className="text-foreground-accent">Error Resolution</div>
                     </motion.div>
                 </motion.div>

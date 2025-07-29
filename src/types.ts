@@ -13,6 +13,7 @@ export interface IBenefitBullet {
     title: string;
     description: string;
     icon: JSX.Element;
+    iconColor?: string;
 }
 
 export interface ISocials {

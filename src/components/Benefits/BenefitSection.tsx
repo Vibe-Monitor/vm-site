@@ -44,7 +44,7 @@ const BenefitSection: React.FC<Props> = ({ benefit }: Props) => {
 
                     <div className="mx-auto w-full mt-8 grid grid-cols-1 md:grid-cols-3 gap-10">
                         {bullets.map((item, index) => (
-                            <BenefitBullet key={index} title={item.title} icon={item.icon} description={item.description} index={index} />
+                            <BenefitBullet key={index} title={item.title} icon={item.icon} description={item.description} index={index} iconColor={item.iconColor} />
                         ))}
                     </div>
                 </div>

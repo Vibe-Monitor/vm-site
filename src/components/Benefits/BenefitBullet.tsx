@@ -6,7 +6,7 @@ interface BenefitBulletProps extends IBenefitBullet {
     index: number;
 }
 
-const BenefitBullet: React.FC<BenefitBulletProps> = ({ title, description, icon, index }) => {
+const BenefitBullet: React.FC<BenefitBulletProps> = ({ title, description, icon, index, iconColor = "text-primary" }) => {
     return (
         <motion.div
             className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-lg"
@@ -16,7 +16,7 @@ const BenefitBullet: React.FC<BenefitBulletProps> = ({ title, description, icon,
             viewport={{ once: true }}
             whileHover={{ scale: 1.05 }}
         >
-            <div className="flex justify-center mb-4 text-primary" aria-hidden="true">
+            <div className={`flex justify-center mb-4 ${iconColor} [&>svg]:w-[26px] [&>svg]:h-[26px]`} aria-hidden="true">
                 {icon}
             </div>
             <div>

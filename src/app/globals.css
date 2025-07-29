@@ -11,6 +11,13 @@
   --primary-accent: #e5c230;
   --foreground-accent: #454545;
   --hero-background: #F3F3F5;
+  
+  /* Contextual colors for icons */
+  --color-analytical: #3B82F6;
+  --color-integration: #10B981;
+  --color-tools: #F59E0B;
+  --color-linkedin: #0077B5;
+  --color-cta: #EA580C;
 }
 
 html {
@@ -60,4 +67,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .benefit-section:last-of-type > div {
   @apply mb-10;
+}
+
+/* Ensure icon colors are properly applied */
+.text-analytical svg {
+  color: var(--color-analytical);
+}
+
+.text-integration svg {
+  color: var(--color-integration);
+}
+
+.text-tools svg {
+  color: var(--color-tools);
+}
+
+.text-linkedin svg {
+  color: var(--color-linkedin);
 }

@@ -17,6 +17,13 @@ const config: Config = {
         "primary-accent": "var(--primary-accent)",
         "foreground-accent": "var(--foreground-accent)",
         "hero-background": "var(--hero-background)",
+        
+        // Contextual colors
+        "analytical": "var(--color-analytical)",
+        "integration": "var(--color-integration)",
+        "tools": "var(--color-tools)",
+        "linkedin": "var(--color-linkedin)",
+        "cta": "var(--color-cta)",
       },
     },
   },
