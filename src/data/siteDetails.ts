@@ -2,8 +2,8 @@ export const siteDetails = {
     siteName: 'VibeMonitor',
     siteUrl: 'https://vibemonitor.com/',
     metadata: {
-        title: 'VibeMonitor - AI-Native Observability Platform',
-        description: 'Cloud-agnostic observability SaaS platform that reduces incident resolution time with AI-powered insights across logs, metrics, traces, and infrastructure.',
+        title: 'VibeMonitor - AI Assisted Observability',
+        description: 'Observability that builds itself',
     },
     language: 'en-us',
     locale: 'en-US',

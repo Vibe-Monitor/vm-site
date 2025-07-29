@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: '/images/vm-logo.png',
         width: 1200,
         height: 630,
-        alt: `${siteDetails.siteName} - AI-Native Observability Platform`,
+        alt: `${siteDetails.siteName} - AI Assisted Observability`,
         type: 'image/png',
       },
     ],
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/vm-logo.png',
-        alt: `${siteDetails.siteName} - AI-Native Observability Platform`,
+        alt: `${siteDetails.siteName} - AI Assisted Observability`,
       },
     ],
   },
