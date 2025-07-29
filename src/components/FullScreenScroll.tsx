@@ -91,13 +91,13 @@ const FullScreenScroll: React.FC<FullScreenScrollProps> = ({ children, sectionId
 
   return (
     <>
-      {/* Navigation Dots - Responsive */}
-      <div className="fixed bottom-6 right-1/2 transform translate-x-1/2 md:right-6 md:top-1/2 md:transform md:-translate-y-1/2 md:translate-x-0 z-50 flex flex-row md:flex-col gap-4 md:gap-3">
+      {/* Navigation Dots - Desktop Only */}
+      <div className="hidden md:flex fixed right-6 top-1/2 transform -translate-y-1/2 z-50 flex-col gap-3">
         {children.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollToSection(index)}
-            className={`w-5 h-5 md:w-3 md:h-3 rounded-full transition-all duration-300 ${ 
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${ 
               currentSection === index
                 ? 'bg-primary scale-125 shadow-lg'
                 : 'bg-gray-300 hover:bg-gray-400 hover:scale-110'

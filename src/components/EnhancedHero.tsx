@@ -82,7 +82,7 @@ const EnhancedHero: React.FC = () => {
     // Render static version initially, then enhance with motion
     if (!isClient) {
         return (
-            <div className="relative flex items-center justify-center min-h-screen px-6 sm:px-8 md:px-5 w-full">
+            <div className="relative flex items-start justify-center min-h-screen pt-12 md:items-center md:pt-0 px-6 sm:px-8 md:px-5 w-full">
                 {content}
             </div>
         );
@@ -91,7 +91,7 @@ const EnhancedHero: React.FC = () => {
     // Enhanced version with animations for client-side
     return (
         <motion.div
-            className="relative flex items-center justify-center min-h-screen px-6 sm:px-8 md:px-5 w-full"
+            className="relative flex items-start justify-center min-h-screen pt-12 md:items-center md:pt-0 px-6 sm:px-8 md:px-5 w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

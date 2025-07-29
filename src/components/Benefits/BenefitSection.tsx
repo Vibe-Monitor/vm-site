@@ -49,7 +49,7 @@ const BenefitSection: React.FC<Props> = ({ benefit }: Props) => {
     return (
         <section className="benefit-section">
             <motion.div
-                className="flex flex-col items-center justify-center max-w-4xl mx-auto px-6"
+                className="flex flex-col items-center justify-center max-w-4xl mx-auto px-6 py-8"
                 variants={containerVariants}
                 initial="offscreen"
                 whileInView="onscreen"
