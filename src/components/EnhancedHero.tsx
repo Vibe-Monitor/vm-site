@@ -63,7 +63,7 @@ const EnhancedHero: React.FC = () => {
                 {/* Inline Email Form */}
                 <div className="mt-8 max-w-md mx-auto px-4 sm:px-0">
                     <iframe 
-                        data-tally-src="https://tally.so/embed/3jALra?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                        data-tally-src="https://tally.so/embed/3lkzbp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
                         loading="eager" 
                         width="100%" 
                         height="150" 
