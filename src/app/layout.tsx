@@ -5,6 +5,7 @@ import '../types/global';
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import { siteDetails } from '@/data/siteDetails';
 
 import "./globals.css";
@@ -81,14 +82,16 @@ export default function RootLayout({
       <body
         className={`${manrope.className} ${sourceSans.className} antialiased`}
       >
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <PostHogProvider>
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </PostHogProvider>
         <Script 
           src="https://tally.so/widgets/embed.js" 
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
       </body>
     </html>

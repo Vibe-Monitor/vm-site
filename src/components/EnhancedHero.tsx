@@ -62,18 +62,24 @@ const EnhancedHero: React.FC = () => {
                 
                 {/* Inline Email Form */}
                 <div className="mt-8 max-w-md mx-auto px-4 sm:px-0">
-                    <iframe 
-                        data-tally-src="https://tally.so/embed/3lkzbp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                        loading="eager" 
-                        width="100%" 
-                        height="150" 
-                        frameBorder="0" 
-                        marginHeight={0} 
-                        marginWidth={0} 
-                        title="Request Demo - VibeMonitor"
-                        aria-label="Demo request form for VibeMonitor"
-                        className="rounded-lg"
-                    ></iframe>
+                    {isClient ? (
+                        <iframe 
+                            data-tally-src="https://tally.so/embed/3lkzbp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                            loading="eager" 
+                            width="100%" 
+                            height="150" 
+                            frameBorder="0" 
+                            marginHeight={0} 
+                            marginWidth={0} 
+                            title="Request Demo - VibeMonitor"
+                            aria-label="Demo request form for VibeMonitor"
+                            className="rounded-lg"
+                        ></iframe>
+                    ) : (
+                        <div className="h-[150px] rounded-lg bg-gray-100 flex items-center justify-center">
+                            <span className="text-gray-500">Loading form...</span>
+                        </div>
+                    )}
                 </div>
             </div>
         </>
