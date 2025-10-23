@@ -1,10 +1,10 @@
-import EnhancedHero from "@/components/EnhancedHero";
-import OutcomeSection from "@/components/OutcomeSection";
-import BenefitSection from "@/components/Benefits/BenefitSection";
-import FounderNote from "@/components/FounderNote";
-import Container from "@/components/Container";
-import CTA from "@/components/CTA";
-import FullScreenScroll from "@/components/FullScreenScroll";
+import EnhancedHero from "@/components_old/EnhancedHero";
+import OutcomeSection from "@/components_old/OutcomeSection";
+import BenefitSection from "@/components_old/Benefits/BenefitSection";
+import FounderNote from "@/components_old/FounderNote";
+import Container from "@/components_old/Container";
+import CTA from "@/components_old/CTA";
+import FullScreenScroll from "@/components_old/FullScreenScroll";
 import { benefits } from "@/data/benefits";
 
 const HomePage: React.FC = () => {
@@ -17,7 +17,9 @@ const HomePage: React.FC = () => {
       </div>
     )),
     <FounderNote key="founder" />,
-    <Container key="cta"><CTA /></Container>
+    <><Container key="cta"><CTA /></Container>
+    
+    </>
   ];
 
   const sectionIds = [
@@ -25,7 +27,8 @@ const HomePage: React.FC = () => {
     'outcome',
     ...benefits.map((_, index) => `benefit-${index}`),
     'founder',
-    'cta'
+    'cta',
+    
   ];
 
   return (

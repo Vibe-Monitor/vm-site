@@ -1,0 +1,31 @@
+/**
+ * VibeMonitor Theme Configuration
+ * This is the single source of truth for all colors in the application
+ */
+:root {
+  /* Base Colors */
+  --background: #ffffff;
+  --foreground: #1E293B;
+
+  /* Brand Colors */
+  --primary: #1E293B;
+  --primary-accent: #334155;
+  --secondary: #1E293B;
+
+  /* UI Colors */
+  --foreground-accent: #475569;
+  --hero-background: #F3F3F5;
+  --slate-dark: #1E293B;
+
+  /* Text Colors */
+  --text-muted: #94948F;
+
+  /* Contextual/Feature Colors */
+  --color-analytical: #3B82F6;
+  --color-integration: #10B981;
+  --color-tools: #F59E0B;
+  --color-cta: #EA580C;
+
+  /* Social Media Colors */
+  --color-linkedin: #0077B5;
+}

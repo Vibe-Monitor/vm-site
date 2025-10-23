@@ -2,23 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #FED835;
-  --secondary: #304fff;
 
-  --primary-accent: #e5c230;
-  --foreground-accent: #454545;
-  --hero-background: #F3F3F5;
-  
-  /* Contextual colors for icons */
-  --color-analytical: #3B82F6;
-  --color-integration: #10B981;
-  --color-tools: #F59E0B;
-  --color-linkedin: #0077B5;
-  --color-cta: #EA580C;
-}
 
 html {
   @apply scroll-smooth;

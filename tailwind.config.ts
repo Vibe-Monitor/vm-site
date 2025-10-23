@@ -17,7 +17,8 @@ const config: Config = {
         "primary-accent": "var(--primary-accent)",
         "foreground-accent": "var(--foreground-accent)",
         "hero-background": "var(--hero-background)",
-        
+        "text-muted": "var(--text-muted)",
+
         // Contextual colors
         "analytical": "var(--color-analytical)",
         "integration": "var(--color-integration)",

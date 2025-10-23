@@ -3,11 +3,11 @@ import { Source_Sans_3, Manrope } from "next/font/google";
 import Script from 'next/script';
 import '../types/global';
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { PostHogProvider } from "@/components/PostHogProvider";
+import Header from "@/components_old/Header";
+import { PostHogProvider } from "@/components_old/PostHogProvider";
 import { siteDetails } from '@/data/siteDetails';
-
+import Footer from "@/components/Footer/footer";
+import "../styles/theme.css";
 import "./globals.css";
 
 const manrope = Manrope({ subsets: ['latin'] });
