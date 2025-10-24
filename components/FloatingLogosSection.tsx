@@ -97,7 +97,6 @@ export function FloatingLogosSection() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
               animate={{
                 rotate: [logo.angle, logo.angle + 360],
               }}

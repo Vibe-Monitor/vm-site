@@ -55,12 +55,12 @@ export function MagicMomentSection() {
               className="h-full rounded-full"
               style={{
                 background: 'linear-gradient(90deg, #9CA3AF 0%, #FFB800 50%, #10B981 100%)',
+                transformOrigin: 'left',
               }}
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.3 }}
-              style={{ transformOrigin: 'left' }}
             />
           </div>
 

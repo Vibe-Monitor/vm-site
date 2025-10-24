@@ -2,13 +2,28 @@
 
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowRight, Sparkles, Clock, CheckCircle2, TrendingUp } from 'lucide-react';
-import { useRef, useMemo } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 // OPTION 4: 3D Floating Island with Parallax
 // Card floats in space with depth and perspective
 
+// Generate stars once outside component to ensure consistent positions between server and client
+const generateStars = () => {
+  return Array.from({ length: 30 }, (_, i) => ({
+    id: i,
+    left: ((i * 37) % 100), // Pseudo-random but deterministic
+    top: ((i * 73) % 100),  // Pseudo-random but deterministic
+    duration: 2 + ((i * 17) % 30) / 10,
+    delay: ((i * 23) % 20) / 10,
+  }));
+};
+
+const STARS = generateStars();
+
 export function FinalCTAOption4() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -17,15 +32,8 @@ export function FinalCTAOption4() {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
   const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [15, 0, -15]);
 
-  // Generate star positions once to avoid hydration mismatch
-  const stars = useMemo(() => {
-    return Array.from({ length: 30 }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      duration: 2 + Math.random() * 3,
-      delay: Math.random() * 2,
-    }));
+  useEffect(() => {
+    setMounted(true);
   }, []);
 
   return (
@@ -37,7 +45,7 @@ export function FinalCTAOption4() {
       <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, #0F1828 0%, #050A14 100%)' }} />
 
       {/* Floating Stars */}
-      {stars.map((star) => (
+      {STARS.map((star) => (
         <motion.div
           key={star.id}
           className="absolute w-1 h-1 rounded-full bg-white"

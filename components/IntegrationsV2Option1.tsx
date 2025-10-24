@@ -203,12 +203,13 @@ export function IntegrationsV2Option1() {
                     style={{
                       background: item.name === 'Slack' ? '#FFFFFF' : `${item.color}15`,
                       border: `2px solid ${item.color}40`,
+                      color: item.color,
                     }}
                     animate={{
                       borderColor: isHovered ? `${item.color}80` : `${item.color}40`,
                     }}
                   >
-                    <Logo size={28} style={{ color: item.color }} />
+                    <Logo size={28} />
                   </motion.div>
 
                   {/* Plus Sign */}
