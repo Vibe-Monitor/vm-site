@@ -83,7 +83,7 @@ export default function RootLayout({
         className={`${manrope.className} ${sourceSans.className} antialiased`}
       >
         <PostHogProvider>
-          <Header />
+        
           <main>
             {children}
           </main>

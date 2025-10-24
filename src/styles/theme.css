@@ -17,6 +17,20 @@
   --hero-background: #F3F3F5;
   --slate-dark: #1E293B;
 
+  /* Hero Gradient Colors */
+  --hero-gradient-start: #0B1221;
+  --hero-gradient-end: #1A2332;
+  --hero-gradient: linear-gradient(180deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+
+  /* Hero Text Gradient */
+  --hero-text-gradient: linear-gradient(90deg, #FDB022 0%, #F59E0B 50%, #EC4899 100%);
+
+  /* Hero Badge Colors */
+  --badge-border: #6266FA;
+  --badge-bg: black;
+  --badge-text: #FFFFFF;
+  --badge-icon: #FFD11B;
+
   /* Text Colors */
   --text-muted: #94948F;
 
@@ -28,4 +42,8 @@
 
   /* Social Media Colors */
   --color-linkedin: #0077B5;
+
+  /* Hero Badge Colors */
+  --badge-accent: #EAB308;
+  --badge-bg: rgba(234, 179, 8, 0.1);
 }

@@ -4,6 +4,7 @@ import { ctaDetails } from "@/data/cta";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import '@/types/global';
+import { Badge } from '@/components/Badge';
 
 const CTA: React.FC = () => {
     useEffect(() => {
@@ -19,8 +20,11 @@ const CTA: React.FC = () => {
                     <div className="rounded-3xl absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-slate-800 to-slate-900">
                         <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
-
-                    <div className="h-full flex flex-col items-center justify-center text-white text-center px-5">
+<Badge 
+  text="Ship fearlessly. Find root cause in under 60 seconds." 
+  className="bg-blue-950/80 border-blue-800 text-yellow-400 px-8 py-3 text-base"
+/>
+   <div className="h-full flex flex-col items-center justify-center text-white text-center px-5">
                         <motion.h2 
                             className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl"
                             initial={{ opacity: 0, y: 30 }}
