@@ -63,8 +63,8 @@ export function HowItWorksOption3() {
       icon: Brain,
       number: '03',
       label: 'AI-Powered Analysis',
-      title: 'Grok AI at work',
-      description: 'Grok AI identifies errors and anomalies. Learns your system patterns over time for better accuracy.',
+      title: 'AI at work',
+      description: 'AI identifies errors and anomalies. Learns your system patterns over time for better accuracy.',
       color: '#6266FA',
       visual: (
         <div className="space-y-2">

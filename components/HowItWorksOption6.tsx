@@ -31,7 +31,7 @@ export function HowItWorksOption6() {
       number: '03',
       icon: Brain, 
       word: 'Analyze',
-      micro: 'Grok AI',
+      micro: 'AI',
       color: '#6266FA',
       accent: '2s'
     },

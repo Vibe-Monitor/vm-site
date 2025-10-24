@@ -13,7 +13,7 @@ export function HowItWorksOption4() {
   const steps = [
     { icon: Plug, number: '01', title: 'Connect', detail: 'One-time setup', color: '#6266FA' },
     { icon: Activity, number: '02', title: '24/7 Watch', detail: 'Auto-monitor', color: '#FFCF00' },
-    { icon: Brain, number: '03', title: 'AI Detect', detail: 'Grok analysis', color: '#6266FA' },
+    { icon: Brain, number: '03', title: 'AI Detect', detail: 'AI analysis', color: '#6266FA' },
     { icon: Bell, number: '04', title: 'Slack Alert', detail: '< 60 seconds', color: '#FFCF00' },
     { icon: Search, number: '05', title: 'AI Guide', detail: 'Smart fix', color: '#10B981' },
     { icon: Sparkles, number: '06', title: 'Auto-Fix', detail: 'Coming soon', color: '#A38BF4' },

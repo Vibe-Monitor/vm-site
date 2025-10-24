@@ -31,7 +31,7 @@ export function HowItWorksOption2() {
       icon: Brain,
       label: 'Error Detected',
       shortDesc: 'AI catches what humans miss',
-      fullDesc: 'Grok AI spots errors the moment they happen. It learns your system\'s normal behavior, so it catches the weird stuff—edge cases, race conditions, silent failures.',
+      fullDesc: 'AI spots errors the moment they happen. It learns your system\'s normal behavior, so it catches the weird stuff—edge cases, race conditions, silent failures.',
       color: '#6266FA',
       badge: 'Smart',
     },

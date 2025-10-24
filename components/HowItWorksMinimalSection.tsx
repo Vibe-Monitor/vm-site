@@ -33,7 +33,7 @@ export function HowItWorksMinimalSection() {
       icon: Brain,
       label: 'AI-Powered Analysis',
       title: 'Intelligent error detection',
-      description: 'Grok AI identifies errors and anomalies. Learns your system patterns.',
+      description: 'AI identifies errors and anomalies. Learns your system patterns.',
       color: '#6266FA',
       gradient: 'linear-gradient(135deg, #6266FA 0%, #A38BF4 100%)',
       badge: 'AI-powered',

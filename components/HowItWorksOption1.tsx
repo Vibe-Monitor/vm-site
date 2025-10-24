@@ -30,7 +30,7 @@ export function HowItWorksOption1() {
       icon: Brain,
       label: 'Analyze',
       title: 'AI-Powered Analysis',
-      description: 'Grok AI identifies errors and learns system patterns.',
+      description: 'AI identifies errors and learns system patterns.',
       color: '#6266FA',
     },
     {
