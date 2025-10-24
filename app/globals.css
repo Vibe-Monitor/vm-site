@@ -1198,6 +1198,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hide Next.js development indicator */
+#__next-build-watcher {
+  display: none !important;
+}
+
 @keyframes fadeSlideUp {
   from {
     opacity: 0;

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { VibemonitorLogo } from './VibemonitorLogo';
+import Image from 'next/image';
 
 export function CleanFooter() {
   const links = [
@@ -22,13 +22,14 @@ export function CleanFooter() {
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-[#6266FA] flex items-center justify-center">
-              <span style={{ fontSize: '14px', fontWeight: 700, color: '#fff' }}>V</span>
-            </div>
-            <span style={{ fontSize: '14px', fontWeight: 600, color: '#E5E7EB' }}>
-              Vibemonitor.ai
-            </span>
+          <div className="flex items-center">
+            <Image
+              src="/vibemonitor-logo.svg"
+              alt="Vibemonitor.ai"
+              width={160}
+              height={32}
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Links */}

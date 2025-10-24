@@ -37,7 +37,7 @@ export default function Home() {
       <IntegrationsV2Option1 />
       <HowItWorksOption2 />
       <FinalCTAOption4 />
-      <CleanFooter />
+      
 
       {/* Exit Intent Popup */}
       <AnimatePresence>

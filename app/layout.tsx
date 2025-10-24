@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
-
+import { PostHogProvider } from '@/components/PostHog/PostHogProvider'
+import { CleanFooter } from '@/components/CleanFooter'
 export const metadata: Metadata = {
-  title: 'Vibemonitor.ai - Landing Page',
-  description: 'Create Landing Page for Vibemonitor.ai',
+  title: 'Vibemonitor.ai',
+  description: 'Landing Page of Vibemonitor.ai',
+  icons: {
+    icon: '/logo.svg',
+  },
 }
 
 export default function RootLayout({
@@ -12,8 +16,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+      <PostHogProvider>
+        <html lang="en">
+        <body>{children}</body>
+        </html>
+        <CleanFooter />
+      </PostHogProvider>
+
   )
 }
