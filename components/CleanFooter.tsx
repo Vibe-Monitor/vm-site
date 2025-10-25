@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 export function CleanFooter() {
   const links = [
-    { label: 'Docs', href: '#' },
-    { label: 'Pricing', href: '#' },
-    { label: 'Support', href: '#' },
+
+    { label: 'Support', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=support@vibemonitor.ai' },
     { label: 'Privacy', href: '/privacy' },
     { label: 'Terms', href: '/terms' },
+
   ];
 
   return (
