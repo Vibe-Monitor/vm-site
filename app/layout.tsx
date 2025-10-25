@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Vibemonitor.ai',
   description: 'Landing Page of Vibemonitor.ai',
   icons: {
-    icon: '/logo.svg',
+    icon: '/logo.svg?v=2',
   },
 }
 
