@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'motion/react';
-import { Zap, CheckCircle2, FileCode, Send, Sparkles, ArrowRight, Search, GitBranch, AlertTriangle, MessageSquare } from 'lucide-react';
+import { Zap, CheckCircle2, FileCode, Send, Sparkles, ArrowRight, Search, GitBranch, AlertTriangle, MessageSquare, Play } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { VibemonitorLogo } from './VibemonitorLogo';
 import { GithubLogo } from './GithubLogo';
@@ -149,7 +149,7 @@ export function InteractiveProofOption3() {
               color: '#E5E7EB',
             }}
           >
-            60 seconds to root cause.
+            Minutes to root cause.
             <br />
             <span 
               style={{
@@ -163,15 +163,67 @@ export function InteractiveProofOption3() {
             </span>
           </h2>
           
-          <p style={{ 
-            fontSize: 'clamp(16px, 2vw, 20px)', 
+          <p style={{
+            fontSize: 'clamp(16px, 2vw, 20px)',
             color: '#95A3B2',
             maxWidth: '600px',
             margin: '0 auto',
-            lineHeight: '1.6'
+            lineHeight: '1.6',
+            marginBottom: '24px'
           }}>
             Watch a real production error get caught, diagnosed, and solved—faster than you can read this sentence
           </p>
+
+          {/* YouTube Video Link Button - Clean */}
+          <motion.a
+            href="https://youtu.be/KNVzyOIRnMs?si=BmeCjBm74kmCPTAe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full"
+            style={{
+              background: 'linear-gradient(135deg, #FFCF00 0%, #FF9500 100%)',
+              border: 'none',
+              cursor: 'pointer',
+              textDecoration: 'none',
+              boxShadow: '0 4px 16px rgba(255, 207, 0, 0.25)',
+            }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: '0 6px 24px rgba(255, 207, 0, 0.35)',
+            }}
+            whileTap={{
+              scale: 0.98,
+            }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <motion.div
+              animate={{
+                rotate: [0, -8, 8, -8, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut',
+                repeatDelay: 1,
+              }}
+            >
+              <Play className="w-5 h-5 fill-current" style={{ color: '#0F1828' }} />
+            </motion.div>
+
+            <span style={{
+              fontWeight: 700,
+              fontSize: '16px',
+              color: '#0F1828',
+              letterSpacing: '0.3px',
+            }}>
+              Watch Product Demo
+            </span>
+
+            <ArrowRight className="w-5 h-5" style={{ color: '#0F1828' }} />
+          </motion.a>
         </motion.div>
 
         {/* Enhanced Demo Card with glassmorphism */}
@@ -954,7 +1006,7 @@ export function InteractiveProofOption3() {
                     letterSpacing: '-0.02em'
                   }}
                 >
-                  2.3s
+                  60s
                 </motion.p>
                 <p style={{ fontSize: '14px', color: '#95A3B2', fontWeight: 500 }}>Total time</p>
               </motion.div>

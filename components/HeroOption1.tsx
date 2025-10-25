@@ -131,7 +131,7 @@ export function HeroOption1() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}>
-              Ship fearlessly. Find root cause in under 60 seconds.
+              Ship fearlessly. Find root cause in minutes not hours.
             </span>
           </div>
         </motion.div>
@@ -178,7 +178,7 @@ export function HeroOption1() {
             fontWeight: 400
           }}
         >
-          Production errors detected and analyzed with root cause in 60 seconds. AI-powered monitoring that tells you exactly what went wrong.
+          Production errors detected and analyzed with root cause in minutes. AI-powered monitoring that tells you exactly what went wrong.
         </motion.p>
 
         {/* CTA Button */}

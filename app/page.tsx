@@ -73,7 +73,7 @@ export default function Home() {
                 </h3>
 
                 <p style={{ fontSize: '16px', color: '#98A3B1', marginBottom: '24px' }}>
-                  Find root cause of your first error in 60 seconds. Start free. No card required.
+                  Find root cause of your first error in minutes. Start free. No card required.
                 </p>
 
                 <div className="space-y-3">

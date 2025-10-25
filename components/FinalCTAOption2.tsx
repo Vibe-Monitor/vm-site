@@ -90,8 +90,8 @@ export function FinalCTAOption2() {
           className="flex items-center justify-center gap-12 mb-16"
         >
           {[
-            { number: '147', label: 'Errors fixed today', color: '#10B981' },
-            { number: '2.3s', label: 'Average fix time', color: '#FFCF00' },
+            { number: '147', label: 'Errors investigated today', color: '#10B981' },
+            { number: '59s', label: 'Average investigation time', color: '#FFCF00' },
             { number: '892+', label: 'Teams using', color: '#6266FA' },
           ].map((stat, i) => (
             <motion.div
@@ -143,7 +143,7 @@ export function FinalCTAOption2() {
               backgroundClip: 'text',
             }}
           >
-            60 seconds
+            minutes
           </span>
         </motion.h2>
 

@@ -165,7 +165,7 @@ export function FinalCTAOption1() {
               marginBottom: '40px'
             }}
           >
-            Start fixing them in 60 seconds. Every time.
+            Start fixing them in minutes. Every time.
           </motion.p>
 
           {/* Stats */}

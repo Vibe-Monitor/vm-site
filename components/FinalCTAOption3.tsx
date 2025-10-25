@@ -123,7 +123,7 @@ export function FinalCTAOption3() {
                   Errors auto-fixed today
                 </p>
                 <p style={{ fontSize: '16px', color: '#95A3B2', lineHeight: '1.6' }}>
-                  Join 892+ engineering teams catching production errors in under 60 seconds
+                  Join 892+ engineering teams catching production errors in under 5 minutes.
                 </p>
               </div>
 

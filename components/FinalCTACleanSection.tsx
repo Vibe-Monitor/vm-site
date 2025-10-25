@@ -332,7 +332,7 @@ export function FinalCTACleanSection() {
                   letterSpacing: '-0.02em'
                 }}
               >
-                2.3s
+                59s
               </p>
               <p style={{ fontSize: '14px', color: '#95A3B2', fontWeight: 500 }}>
                 Average fix time
