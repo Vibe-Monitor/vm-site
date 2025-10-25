@@ -27,7 +27,7 @@ export function IntegrationsV2Option1() {
       name: 'GitHub',
       description: 'Maps Repos into Graphs. Finds breaking change across services.',
       color: '#E5E7EB',
-      stat: 'Instant rollback ready',
+      stat: 'Instant fix ready',
     },
     {
       logo: SlackLogo,
