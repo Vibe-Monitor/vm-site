@@ -32,7 +32,7 @@ export function IntegrationsV2Option1() {
     {
       logo: SlackLogo,
       name: 'Slack',
-      description: 'Alerts with root cause analysis land where your team already lives.',
+      description: 'Instant answers in a multi-turn conversation, all within slack.',
       color: '#6266FA',
       stat: 'No dashboard hopping',
     },
