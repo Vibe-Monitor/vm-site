@@ -20,7 +20,7 @@ export function IntegrationsV2Option1() {
       name: 'Grafana',
       description: 'Analyzes logs and metrics. Get insights—not just thread dumps',
       color: '#F59E0B',
-      stat: 'Detection → Root cause in 2.3s',
+      stat: 'Symptom → Insight in 2.3s',
     },
     {
       logo: GithubLogo,
