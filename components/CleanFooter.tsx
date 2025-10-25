@@ -8,8 +8,8 @@ export function CleanFooter() {
     { label: 'Docs', href: '#' },
     { label: 'Pricing', href: '#' },
     { label: 'Support', href: '#' },
-    { label: 'Privacy', href: '#' },
-    { label: 'Terms', href: '#' },
+    { label: 'Privacy', href: '/privacy' },
+    { label: 'Terms', href: '/terms' },
   ];
 
   return (
