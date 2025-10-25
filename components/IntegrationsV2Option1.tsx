@@ -18,21 +18,21 @@ export function IntegrationsV2Option1() {
     {
       logo: GrafanaLogo,
       name: 'Grafana',
-      description: 'Detect anomalies. Get instant root cause—not just graphs.',
+      description: 'Analyzes logs and metrics. Get insights—not just thread dumps',
       color: '#F59E0B',
-      stat: 'Detection → Root cause in 2.3s',
+      stat: 'Symptom → Insight in 2.3s',
     },
     {
       logo: GithubLogo,
       name: 'GitHub',
-      description: 'Every error linked to the exact commit that caused it.',
+      description: 'Maps Repos into Graphs. Finds breaking change across services.',
       color: '#E5E7EB',
-      stat: 'Instant rollback ready',
+      stat: 'Instant fix ready',
     },
     {
       logo: SlackLogo,
       name: 'Slack',
-      description: 'Alerts with root cause analysis land where your team already lives.',
+      description: 'Instant answers in a multi-turn conversation, all within slack.',
       color: '#6266FA',
       stat: 'No dashboard hopping',
     },
@@ -309,7 +309,7 @@ export function IntegrationsV2Option1() {
               Upcoming Integrations:
             </span>
             <span style={{ fontSize: '14px', color: '#E5E7EB', fontWeight: 600 }}>
-              Sentry • Datadog • PagerDuty • and more
+              AWS Cloudwatch • Splunk • MS Teams • and more
             </span>
           </div>
         </motion.div>
