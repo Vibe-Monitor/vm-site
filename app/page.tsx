@@ -79,13 +79,16 @@ export default function Home() {
                 </p>
 
                 <div className="space-y-3">
-                  <button
+                  <a
+                    href="https://tally.so/r/3lkzbp"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-primary w-full flex items-center justify-center gap-2"
-                    style={{ height: '48px', fontSize: '16px' }}
+                    style={{ height: '48px', fontSize: '16px', textDecoration: 'none' }}
                   >
                     Get Started Free
                     <ArrowRight className="w-5 h-5" />
-                  </button>
+                  </a>
                   <button
                     onClick={() => setShowExitIntent(false)}
                     className="w-full px-6 py-3 text-[#98A3B1] hover:text-[#E5E7EB] transition-colors text-sm"
