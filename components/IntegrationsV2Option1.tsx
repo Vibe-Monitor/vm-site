@@ -309,7 +309,7 @@ export function IntegrationsV2Option1() {
               Upcoming Integrations:
             </span>
             <span style={{ fontSize: '14px', color: '#E5E7EB', fontWeight: 600 }}>
-              Sentry • Datadog • PagerDuty • and more
+              AWS Cloudwatch • Splunk • MS Teams • and more
             </span>
           </div>
         </motion.div>
