@@ -75,8 +75,8 @@ export function HeroOption1() {
       {[
         { code: 'error.catch()', top: '15%', left: '10%', delay: 0 },
         { code: 'api.retry()', top: '25%', right: '15%', delay: 1 },
-        { code: 'root cause: 2.3s', bottom: '20%', left: '12%', delay: 2 },
-        { code: 'Slack alert', top: '60%', right: '10%', delay: 1.5 },
+        { code: '500: Server Error', bottom: '20%', left: '12%', delay: 2 },
+        { code: 'Slack alert', top: '70%', right: '30%', delay: 1.5 },
       ].map((item, i) => (
         <motion.div
           key={i}

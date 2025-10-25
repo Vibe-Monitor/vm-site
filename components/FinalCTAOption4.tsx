@@ -191,7 +191,7 @@ export function FinalCTAOption4() {
                     backgroundClip: 'text',
                   }}
                 >
-                  Start preventing.
+                  Start fixing.
                 </span>
               </motion.h2>
 
@@ -331,8 +331,8 @@ export function FinalCTAOption4() {
 
         {/* Floating Elements Around Card */}
         {[
-          { icon: '✓', label: 'SOC 2 Certified', position: { top: '10%', left: '-10%' }, delay: 0.8 },
-          { icon: '⚡', label: '60s to fix', position: { top: '10%', right: '-10%' }, delay: 1 },
+          { icon: '✓', label: 'Data Security', position: { top: '10%', left: '-10%' }, delay: 0.8 },
+          { icon: '⚡', label: 'Minutes to Debug', position: { top: '20%', right: '-10%' }, delay: 1 },
           { icon: '🔒', label: 'Enterprise ready', position: { bottom: '10%', left: '-10%' }, delay: 1.2 },
           { icon: '🚀', label: 'Ship faster', position: { bottom: '10%', right: '-10%' }, delay: 1.4 },
         ].map((item, i) => (
