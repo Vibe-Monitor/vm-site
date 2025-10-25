@@ -18,7 +18,7 @@ export function IntegrationsV2Option1() {
     {
       logo: GrafanaLogo,
       name: 'Grafana',
-      description: 'Detect anomalies. Get instant root cause—not just graphs.',
+      description: 'Analyzes logs and metrics. Get insights—not just thread dumps',
       color: '#F59E0B',
       stat: 'Detection → Root cause in 2.3s',
     },
