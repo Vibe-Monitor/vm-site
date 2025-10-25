@@ -25,7 +25,7 @@ export function IntegrationsV2Option1() {
     {
       logo: GithubLogo,
       name: 'GitHub',
-      description: 'Every error linked to the exact commit that caused it.',
+      description: 'Maps Repos into Graphs. Finds breaking change across services.',
       color: '#E5E7EB',
       stat: 'Instant rollback ready',
     },
