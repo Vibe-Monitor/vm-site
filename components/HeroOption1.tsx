@@ -188,8 +188,11 @@ export function HeroOption1() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex justify-center mb-12"
         >
-          <motion.button
-            whileHover={{ 
+          <motion.a
+            href="https://tally.so/r/3lkzbp"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{
               scale: 1.05,
               boxShadow: '0 0 40px rgba(255, 207, 0, 0.5)'
             }}
@@ -201,7 +204,9 @@ export function HeroOption1() {
               borderRadius: '12px',
               border: 'none',
               cursor: 'pointer',
-              boxShadow: '0 8px 32px rgba(255, 207, 0, 0.3)'
+              boxShadow: '0 8px 32px rgba(255, 207, 0, 0.3)',
+              textDecoration: 'none',
+              display: 'inline-block'
             }}
           >
             <motion.div
@@ -231,7 +236,7 @@ export function HeroOption1() {
               Try for free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Trust Badges */}

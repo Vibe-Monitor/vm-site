@@ -276,8 +276,11 @@ export function FinalCTAOption4() {
                 transition={{ delay: 0.6 }}
                 className="text-center"
               >
-                <motion.button
-                  whileHover={{ 
+                <motion.a
+                  href="https://tally.so/r/3lkzbp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{
                     scale: 1.08,
                     boxShadow: '0 0 60px rgba(255, 207, 0, 0.6)'
                   }}
@@ -289,7 +292,9 @@ export function FinalCTAOption4() {
                     borderRadius: '16px',
                     border: 'none',
                     cursor: 'pointer',
-                    boxShadow: '0 12px 48px rgba(255, 207, 0, 0.4)'
+                    boxShadow: '0 12px 48px rgba(255, 207, 0, 0.4)',
+                    textDecoration: 'none',
+                    display: 'inline-block'
                   }}
                 >
                   <motion.div
@@ -319,7 +324,7 @@ export function FinalCTAOption4() {
                     Claim your free account
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                   </span>
-                </motion.button>
+                </motion.a>
 
                 <p style={{ fontSize: '14px', color: '#95A3B2' }}>
                   No credit card  •  2-minute setup  •  Cancel anytime
