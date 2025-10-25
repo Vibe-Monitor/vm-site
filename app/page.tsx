@@ -7,6 +7,7 @@ import { InteractiveProofOption3 } from '@/components/InteractiveProofOption3';
 import { IntegrationsV2Option1 } from '@/components/IntegrationsV2Option1';
 import { FinalCTAOption4 } from '@/components/FinalCTAOption4';
 import { CleanFooter } from '@/components/CleanFooter';
+import { VideoShowcase } from '@/components/VideoShowcase';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ArrowRight } from 'lucide-react';
 
@@ -35,7 +36,8 @@ export default function Home() {
       <HeroOption1 />
       <InteractiveProofOption3 />
       <IntegrationsV2Option1 />
-      <HowItWorksOption2 />
+      <VideoShowcase />
+      {/* <HowItWorksOption2 /> */}
       <FinalCTAOption4 />
       
 
