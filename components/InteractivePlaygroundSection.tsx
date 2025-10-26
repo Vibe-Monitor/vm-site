@@ -94,8 +94,20 @@ export function InteractivePlaygroundSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleSubmit}
-                className="px-6 py-3 rounded-xl bg-[#6266FA] hover:bg-[#5558E3] transition-colors flex items-center gap-2"
+                className="px-6 py-3 rounded-xl bg-[#6266FA] hover:bg-[#5558E3] transition-colors flex items-center gap-2 relative"
                 style={{ fontWeight: 600, color: '#E5E7EB' }}
+                animate={{
+                  boxShadow: [
+                    '0 0 20px rgba(98, 102, 250, 0.5)',
+                    '0 0 30px rgba(98, 102, 250, 0.8)',
+                    '0 0 20px rgba(98, 102, 250, 0.5)',
+                  ],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
+                }}
               >
                 <Send className="w-4 h-4" />
                 Send
