@@ -12,23 +12,25 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, ArrowRight } from 'lucide-react';
 
 export default function Home() {
+  // TEMPORARILY DISABLED: Exit intent popup
+  // To re-enable, uncomment the lines below
   const [showExitIntent, setShowExitIntent] = useState(false);
   const [hasShownExitIntent, setHasShownExitIntent] = useState(false);
 
-  useEffect(() => {
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !hasShownExitIntent) {
-        setShowExitIntent(true);
-        setHasShownExitIntent(true);
-      }
-    };
+  // useEffect(() => {
+  //   const handleMouseLeave = (e: MouseEvent) => {
+  //     if (e.clientY <= 0 && !hasShownExitIntent) {
+  //       setShowExitIntent(true);
+  //       setHasShownExitIntent(true);
+  //     }
+  //   };
 
-    document.addEventListener('mouseleave', handleMouseLeave);
+  //   document.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, [hasShownExitIntent]);
+  //   return () => {
+  //     document.removeEventListener('mouseleave', handleMouseLeave);
+  //   };
+  // }, [hasShownExitIntent]);
 
   return (
     <div className="relative min-h-screen overflow-x-hidden" style={{ background: '#0F1828' }}>
@@ -41,8 +43,9 @@ export default function Home() {
       <FinalCTAOption4 />
       
 
-      {/* Exit Intent Popup */}
-      <AnimatePresence>
+      {/* TEMPORARILY DISABLED: Exit Intent Popup */}
+      {/* To re-enable, uncomment the block below */}
+      {/* <AnimatePresence>
         {showExitIntent && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -106,7 +109,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 }
