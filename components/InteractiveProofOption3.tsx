@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import {  CheckCircle2, Send, Sparkles, MessageSquare } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { VibemonitorLogo } from './VibemonitorLogo';
@@ -849,35 +849,36 @@ export function InteractiveProofOption3() {
                           onClick={handleClick}
                           className="relative flex items-center gap-1.5"
                           style={{
-                            padding: '6px 14px',
+                            padding: '8px 18px',
                             background: '#FFD11B',
-                            borderRadius: '4px',
+                            borderRadius: '6px',
                             border: 'none',
                             cursor: 'pointer',
                             boxShadow: '0 2px 8px rgba(255, 209, 27, 0.3)'
                           }}
                           animate={{
                             boxShadow: [
-                              '0 2px 8px rgba(255, 209, 27, 0.3)',
-                              '0 4px 16px rgba(255, 209, 27, 0.5)',
-                              '0 2px 8px rgba(255, 209, 27, 0.3)',
+                              '0 2px 8px rgba(255, 209, 27, 0.3), 0 0 0 0px rgba(255, 209, 27, 0.4)',
+                              '0 4px 20px rgba(255, 209, 27, 0.6), 0 0 0 6px rgba(255, 209, 27, 0.2)',
+                              '0 2px 8px rgba(255, 209, 27, 0.3), 0 0 0 0px rgba(255, 209, 27, 0.4)',
                             ],
+                            scale: [1, 1.05, 1],
                           }}
                           transition={{
                             duration: 1.5,
                             repeat: Infinity,
                             ease: 'easeInOut'
                           }}
-                          whileHover={{ 
-                            scale: 1.03,
-                            boxShadow: '0 4px 20px rgba(255, 209, 27, 0.5)'
+                          whileHover={{
+                            scale: 1.08,
+                            boxShadow: '0 4px 24px rgba(255, 209, 27, 0.7), 0 0 0 8px rgba(255, 209, 27, 0.3)'
                           }}
-                          whileTap={{ scale: 0.97 }}
+                          whileTap={{ scale: 0.95 }}
                         >
-                          <Send className="w-3.5 h-3.5 text-[#1D1C1D]" />
+                          <Send className="w-4 h-4 text-[#1D1C1D]" />
                           <span style={{
                             fontWeight: 700,
-                            fontSize: '13px',
+                            fontSize: '14px',
                             color: '#1D1C1D',
                           }}>
                             Send

@@ -177,7 +177,7 @@ export function IntegrationsV2Option1() {
                 transition={{ delay: index * 0.1 }}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className="glass p-8 text-center cursor-pointer relative overflow-hidden"
+                className="glass p-8 text-center relative overflow-hidden"
                 whileHover={{ y: -4 }}
                 style={{
                   transition: 'all 0.3s ease',
