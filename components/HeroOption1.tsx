@@ -178,7 +178,7 @@ export function HeroOption1() {
             fontWeight: 400
           }}
         >
-          Production errors detected and analyzed with root cause in minutes. AI-powered monitoring that tells you exactly what went wrong.
+          An AI Agent that investigates your code, logs, and metrics and explains the root cause with clear fixes — right in Slack.
         </motion.p>
 
         {/* CTA Button */}
