@@ -168,7 +168,7 @@ export function VideoShowcase() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/QypxjaaGfa4?si=5TXCRdt7zcND5X4j"
+              src="https://www.youtube.com/embed/w1bVMMRY1ZM"
               title="Vibemonitor Overview - AI-Powered Error Monitoring"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
