@@ -7,12 +7,25 @@ import { VibemonitorLogo } from './VibemonitorLogo';
 import { GrafanaLogo } from './GrafanaLogo';
 import { GithubLogo } from './GithubLogo';
 import { SlackLogo } from './SlackLogo';
+import posthog from 'posthog-js';
+import { trackInteraction } from '@/lib/posthog-utils';
 
 // OPTION 1: Clean Minimal Cards
 // Shows Vibemonitor integrating with each tool
 
 export function IntegrationsV2Option1() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const handleIntegrationClick = (integrationName: string) => {
+    // Track interaction
+    trackInteraction('integration_click', {
+      integration_name: integrationName
+    });
+
+    posthog.capture('integration_card_click', {
+      integration_name: integrationName
+    });
+  };
 
   const integrations = [
     {
@@ -39,7 +52,7 @@ export function IntegrationsV2Option1() {
   ];
 
   return (
-    <section className="relative py-32 px-8 overflow-hidden">
+    <section data-section-name="integrations" className="relative py-32 px-8 overflow-hidden">
       {/* Animated Background - matching other sections */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Gradient orbs */}
@@ -177,7 +190,8 @@ export function IntegrationsV2Option1() {
                 transition={{ delay: index * 0.1 }}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className="glass p-8 text-center relative overflow-hidden"
+                onClick={() => handleIntegrationClick(item.name)}
+                className="glass p-8 text-center relative overflow-hidden cursor-pointer"
                 whileHover={{ y: -4 }}
                 style={{
                   transition: 'all 0.3s ease',

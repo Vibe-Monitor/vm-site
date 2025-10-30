@@ -8,7 +8,7 @@ export function VideoShowcase() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="relative py-20 px-8 overflow-hidden">
+    <section data-section-name="video-ai-showcase" className="relative py-20 px-8 overflow-hidden">
       {/* Animated Background - matching hero and interactive proof */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Gradient orbs */}
