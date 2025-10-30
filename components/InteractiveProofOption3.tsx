@@ -5,6 +5,8 @@ import {  CheckCircle2, Send, Sparkles, MessageSquare } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { VibemonitorLogo } from './VibemonitorLogo';
 import { GithubLogo } from './GithubLogo';
+import posthog from 'posthog-js';
+import { trackInteraction } from '@/lib/posthog-utils';
 
 // OPTION 3: Inline Interactive Demo
 // Redesigned to match Bold Power hero aesthetic
@@ -16,6 +18,26 @@ export function InteractiveProofOption3() {
 
   const handleClick = () => {
     if (stage === 'channel-view') {
+      // Track interaction
+      trackInteraction('demo_interaction', {
+        demo_action: 'start',
+        demo_type: 'ai_investigation'
+      });
+
+      // Track demo start
+      posthog.capture('interactive_demo_step', {
+        step_key: 'demo_started',
+        step_index: 0,
+        action: 'start_investigation'
+      });
+
+      // Track AI usage
+      posthog.capture('ai_feature_interaction', {
+        feature_name: 'interactive_demo',
+        interaction_type: 'demo_started',
+        ai_capability: 'error_investigation'
+      });
+
       setStage('thread-sent');
       setTimeout(() => setStage('thread-ack'), 500);
       setTimeout(() => {
@@ -23,6 +45,18 @@ export function InteractiveProofOption3() {
         setInvestigationStep(0);
       }, 1500);
     } else if (stage === 'thread-complete') {
+      // Track interaction
+      trackInteraction('demo_interaction', {
+        demo_action: 'reset'
+      });
+
+      // Track demo reset
+      posthog.capture('interactive_demo_step', {
+        step_key: 'demo_reset',
+        step_index: -1,
+        action: 'reset'
+      });
+
       setStage('channel-view');
       setInvestigationStep(0);
     }
@@ -33,23 +67,29 @@ export function InteractiveProofOption3() {
     if (stage === 'thread-investigating') {
       const steps = [0, 1, 2, 3, 4, 5, 6, 7];
       let currentStep = 0;
-      
+
       const interval = setInterval(() => {
         currentStep++;
         if (currentStep < steps.length) {
           setInvestigationStep(currentStep);
         } else {
           clearInterval(interval);
+          // Track investigation completion
+          posthog.capture('interactive_demo_step', {
+            step_key: 'investigation_complete',
+            step_index: 8,
+            action: 'complete'
+          });
           setTimeout(() => setStage('thread-complete'), 800);
         }
       }, 600);
-      
+
       return () => clearInterval(interval);
     }
   }, [stage]);
 
   return (
-    <section className="relative py-32 px-8 overflow-hidden">
+    <section data-section-name="interactive-ai-demo" className="relative py-32 px-8 overflow-hidden">
       {/* Animated Background - matching hero */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Gradient orbs */}

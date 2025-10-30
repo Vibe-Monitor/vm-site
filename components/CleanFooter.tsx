@@ -2,6 +2,8 @@
 
 import { motion } from 'motion/react';
 import Image from 'next/image';
+import posthog from 'posthog-js';
+import { trackInteraction } from '@/lib/posthog-utils';
 
 export function CleanFooter() {
   const links = [
@@ -11,6 +13,17 @@ export function CleanFooter() {
     { label: 'Terms', href: '/terms' },
 
   ];
+
+  const handleFooterLinkClick = (linkLabel: string) => {
+    // Track interaction
+    trackInteraction('footer_link', {
+      link_label: linkLabel
+    });
+
+    posthog.capture('footer_link_click', {
+      link_label: linkLabel
+    });
+  };
 
   return (
     <footer className="py-8 px-8" style={{ background: '#1E293B' }}>
@@ -38,6 +51,7 @@ export function CleanFooter() {
               <a
                 key={i}
                 href={link.href}
+                onClick={() => handleFooterLinkClick(link.label)}
                 style={{ fontSize: '13px', color: '#98A3B1', textDecoration: 'none' }}
                 className="hover:text-[#E5E7EB] transition-colors"
               >

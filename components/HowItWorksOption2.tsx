@@ -3,12 +3,33 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { Plug, Activity, Brain, Bell, Search, Sparkles, ChevronDown, Zap } from 'lucide-react';
 import { useState } from 'react';
+import posthog from 'posthog-js';
+import { trackInteraction } from '@/lib/posthog-utils';
 
 // Option 2: Expandable List with Click-to-Reveal
 // Minimal, compact design with interactive expansion
 
 export function HowItWorksOption2() {
   const [expandedStep, setExpandedStep] = useState<number | null>(0);
+
+  const handleStepToggle = (stepIndex: number, stepLabel: string) => {
+    const isExpanding = expandedStep !== stepIndex;
+
+    // Track interaction
+    trackInteraction('step_toggle', {
+      step_number: stepIndex + 1,
+      action: isExpanding ? 'expand' : 'collapse'
+    });
+
+    // Track the toggle action
+    posthog.capture('how_it_works_step_toggle', {
+      step_number: stepIndex + 1,
+      step_label: stepLabel,
+      action: isExpanding ? 'expand' : 'collapse'
+    });
+
+    setExpandedStep(isExpanding ? stepIndex : null);
+  };
 
   const steps = [
     {
@@ -62,7 +83,7 @@ export function HowItWorksOption2() {
   ];
 
   return (
-    <section className="relative py-24 px-8 overflow-hidden">
+    <section data-section-name="how-it-works" className="relative py-24 px-8 overflow-hidden">
       {/* Minimal Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         <div 
@@ -123,7 +144,7 @@ export function HowItWorksOption2() {
               transition={{ delay: index * 0.05 }}
             >
               <motion.button
-                onClick={() => setExpandedStep(expandedStep === index ? null : index)}
+                onClick={() => handleStepToggle(index, step.label)}
                 className="w-full text-left"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}

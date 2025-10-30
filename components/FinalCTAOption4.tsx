@@ -3,6 +3,8 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowRight, Sparkles, Clock, CheckCircle2, TrendingUp } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
+import posthog from 'posthog-js';
+import { trackInteraction } from '@/lib/posthog-utils';
 
 // OPTION 4: 3D Floating Island with Parallax
 // Card floats in space with depth and perspective
@@ -36,8 +38,45 @@ export function FinalCTAOption4() {
     setMounted(true);
   }, []);
 
+  const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    // Track interaction
+    trackInteraction('cta_click', {
+      cta_location: 'final',
+      cta_label: 'Claim your free account'
+    });
+
+    // Track CTA click
+    posthog.capture('cta_click', {
+      cta_location: 'final',
+      cta_label: 'Claim your free account',
+      page_section: 'final_cta'
+    });
+
+    // Track waitlist form start
+    posthog.capture('waitlist_form_start', {
+      cta_location: 'final',
+      page_section: 'final_cta'
+    });
+
+    // Track funnel conversion stage
+    posthog.capture('funnel_stage', {
+      stage: 'conversion',
+      stage_number: 4,
+      description: 'User clicked final CTA'
+    });
+
+    // Navigate after a short delay to ensure events are captured
+    const target = e.currentTarget.href;
+    setTimeout(() => {
+      window.open(target, '_blank', 'noopener,noreferrer');
+    }, 150);
+  };
+
   return (
-    <section 
+    <section
+      data-section-name="final-cta"
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden py-32 px-8"
     >
@@ -280,6 +319,7 @@ export function FinalCTAOption4() {
                   href="https://tally.so/r/3lkzbp"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handleCTAClick}
                   whileHover={{
                     scale: 1.08,
                     boxShadow: '0 0 60px rgba(255, 207, 0, 0.6)'

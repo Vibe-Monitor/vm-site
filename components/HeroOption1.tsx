@@ -2,10 +2,49 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight, Zap, Clock, Shield } from 'lucide-react';
+import posthog from 'posthog-js';
+import { trackInteraction } from '@/lib/posthog-utils';
 
 export function HeroOption1() {
+  const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    // Track interaction
+    trackInteraction('cta_click', {
+      cta_location: 'hero',
+      cta_label: 'Try for free'
+    });
+
+    // Track CTA click
+    posthog.capture('cta_click', {
+      cta_location: 'hero',
+      cta_label: 'Try for free',
+      page_section: 'hero'
+    });
+
+    // Track waitlist form start
+    posthog.capture('waitlist_form_start', {
+      cta_location: 'hero',
+      page_section: 'hero'
+    });
+
+    // Track funnel conversion stage
+    posthog.capture('funnel_stage', {
+      stage: 'conversion',
+      stage_number: 4,
+      description: 'User clicked primary CTA'
+    });
+
+    // Navigate after a short delay to ensure events are captured
+    const target = e.currentTarget.href;
+    setTimeout(() => {
+      window.open(target, '_blank', 'noopener,noreferrer');
+    }, 150);
+  };
+
   return (
-    <section 
+    <section
+      data-section-name="hero" 
       className="relative w-full flex items-center justify-center overflow-hidden"
       style={{ 
         background: 'linear-gradient(180deg, #0C1829 0%, #1a1f35 100%)',
@@ -192,6 +231,7 @@ export function HeroOption1() {
             href="https://tally.so/r/3lkzbp"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleCTAClick}
             whileHover={{
               scale: 1.05,
               boxShadow: '0 0 40px rgba(255, 207, 0, 0.5)'
