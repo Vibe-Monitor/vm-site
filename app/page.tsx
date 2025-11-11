@@ -2,21 +2,16 @@
 
 import { useEffect, useState } from 'react';
 import { HeroOption1 } from '@/components/HeroOption1';
-import { HowItWorksOption2 } from '@/components/HowItWorksOption2';
 import { InteractiveProofOption3 } from '@/components/InteractiveProofOption3';
 import { IntegrationsV2Option1 } from '@/components/IntegrationsV2Option1';
 import { FinalCTAOption4 } from '@/components/FinalCTAOption4';
-import { CleanFooter } from '@/components/CleanFooter';
 import { VideoShowcase } from '@/components/VideoShowcase';
-import { motion, AnimatePresence } from 'motion/react';
-import { X, ArrowRight } from 'lucide-react';
 import posthog from 'posthog-js';
 
 export default function Home() {
   // TEMPORARILY DISABLED: Exit intent popup
   // To re-enable, uncomment the lines below
   const [showExitIntent, setShowExitIntent] = useState(false);
-  const [hasShownExitIntent, setHasShownExitIntent] = useState(false);
 
   // Track exit intent popup show
   useEffect(() => {
@@ -28,28 +23,28 @@ export default function Home() {
   }, [showExitIntent]);
 
   // Handle exit intent CTA click
-  const handleExitIntentCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  // const handleExitIntentCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
 
-    // Track CTA click
-    posthog.capture('cta_click', {
-      cta_location: 'exit_intent',
-      cta_label: 'Get Started Free',
-      page_section: 'exit_intent'
-    });
+  //   // Track CTA click
+  //   posthog.capture('cta_click', {
+  //     cta_location: 'exit_intent',
+  //     cta_label: 'Get Started Free',
+  //     page_section: 'exit_intent'
+  //   });
 
-    // Track waitlist form start
-    posthog.capture('waitlist_form_start', {
-      cta_location: 'exit_intent',
-      page_section: 'exit_intent'
-    });
+  //   // Track waitlist form start
+  //   posthog.capture('waitlist_form_start', {
+  //     cta_location: 'exit_intent',
+  //     page_section: 'exit_intent'
+  //   });
 
-    // Navigate after a short delay
-    const target = e.currentTarget.href;
-    setTimeout(() => {
-      window.open(target, '_blank', 'noopener,noreferrer');
-    }, 150);
-  };
+  //   // Navigate after a short delay
+  //   const target = e.currentTarget.href;
+  //   setTimeout(() => {
+  //     window.open(target, '_blank', 'noopener,noreferrer');
+  //   }, 150);
+  // };
 
   // Handle exit intent dismiss
   // const handleExitIntentDismiss = () => {
